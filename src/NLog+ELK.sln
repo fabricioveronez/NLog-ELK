@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2018
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exemplo01", "Exemplo01\Exemplo01.csproj", "{80DED52E-8C7A-4659-9CD0-B7776680CF92}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NLog+ELK.Api", "NLog+ELK.Api\NLog+ELK.Api.csproj", "{80DED52E-8C7A-4659-9CD0-B7776680CF92}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Compartilhado", "Compartilhado\Compartilhado.csproj", "{04FACCF9-8E26-457B-992B-6A097112EBB1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Compartilhado", "Compartilhado\Compartilhado.csproj", "{04FACCF9-8E26-457B-992B-6A097112EBB1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NLog+ELK.WinForm", "NLog+ELK.WinForm\NLog+ELK.WinForm.csproj", "{08BF11C9-3A50-4320-B038-F77DC91F2D59}"
 EndProject

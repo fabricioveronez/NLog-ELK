@@ -31,7 +31,10 @@ namespace NLog_ELK.WinForm
         {
             this.logger.Info("Efetuando o cadastro do produto.");
 
-            Produto produto = new Produto() { Nome = "Teste", Descricao = "Teste" };
+            Produto produto = new Produto() { Nome = txtNome.Text, Descricao = txtDescricao.Text };
+
+            txtNome.Text = string.Empty;
+            txtDescricao.Text = string.Empty;
 
             try
             {
