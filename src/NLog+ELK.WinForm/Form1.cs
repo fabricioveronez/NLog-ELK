@@ -1,4 +1,5 @@
 ﻿using Compartilhado;
+using NLog;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -29,8 +30,6 @@ namespace NLog_ELK.WinForm
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.logger.Info("Efetuando o cadastro do produto.");
-
             Produto produto = new Produto() { Nome = txtNome.Text, Descricao = txtDescricao.Text };
 
             txtNome.Text = string.Empty;
@@ -40,11 +39,28 @@ namespace NLog_ELK.WinForm
             {
                 MongoDBContext db = new MongoDBContext();
                 db.Produtos.InsertOne(produto);
+
+                LogEventInfo logEvent = new LogEventInfo(LogLevel.Info, "",
+                    string.Format("Produto {0}, {1}, {2} cadastrado com sucesso.",
+                    produto.Id, produto.Nome, produto.Descricao));
+
+                logEvent.Properties["nomeProduto"] = produto.Nome;
+                logEvent.Properties["descricaoProduto"] = produto.Descricao;
+                logEvent.Properties["idProduto"] = produto.Id;
+                this.logger.Log(this.GetType(), logEvent);
+
                 MessageBox.Show("Cadastro efetuado");
             }
             catch (System.Exception ex)
             {
-                this.logger.Error(ex, "Erro ao cadastrar o produto.");
+                LogEventInfo logEvent = new LogEventInfo(LogLevel.Error, "", null,
+                    string.Format("Erro ao cadastrar o produto {0} e {1}.",
+                    produto.Nome, produto.Descricao), null, ex);
+
+                logEvent.Properties["nomeProduto"] = produto.Nome;
+                logEvent.Properties["descricaoProduto"] = produto.Descricao;
+                this.logger.Log(this.GetType(), logEvent);
+
                 MessageBox.Show("Erro ao efetuar o cadastro.");
             }
         }
