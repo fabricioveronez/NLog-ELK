@@ -12,7 +12,7 @@ Execute os comandos em sequencia:
 ## Como acessar a stack 
 
 ### RabbitMQ
-Utilize a url **[http://localhost:15672/](http://localhost:15672/)** para acessar e  **Usuário**: ```logUser``` and **Senha**: ```logPwd```
+Utilize a url **[http://localhost:15672/](http://localhost:15672/)** para acessar e  **Usuário**: ```logUser``` e **Senha**: ```logPwd```
 
 ### ElasticSearch
 Será alimentado pelo Logstash e consultado pelo Kibana
