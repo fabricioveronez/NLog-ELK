@@ -5,7 +5,7 @@ Execute os comandos em sequencia:
 
 ```git clone https://github.com/fabricioveronez/NLog-ELK.git```
 
-```cd NLog-ELK/DockerContainers```
+```cd ./NLog-ELK/DockerContainers```
 
 ```docker-compose up -d```
 
