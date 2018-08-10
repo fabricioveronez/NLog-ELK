@@ -23,6 +23,6 @@ Criará a fila ApplicationsLog no virtual host Log, e irá enviar os dados que e
 ### Kibana
 Utilize a url  **[http://localhost:5601/](http://localhost:5601/)** para acessar o Kibana
 
-Baseado no projeto [EnterpriseApplicationLog](https://github.com/docker-gallery/EnterpriseApplicationLog) do - [Luis Carlos Faria](http://gago.io/)
+Baseado no projeto [EnterpriseApplicationLog](https://github.com/docker-gallery/EnterpriseApplicationLog) do - [Luiz Carlos Faria](http://gago.io/)
 
 
